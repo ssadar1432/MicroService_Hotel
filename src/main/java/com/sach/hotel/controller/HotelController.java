@@ -20,8 +20,6 @@ public class HotelController {
 
     @PostMapping
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel){
-        System.out.println("Hotel Checking");
-
         Hotel addHotel=hotelService.saveHotelDetails(hotel);
         return ResponseEntity.status(HttpStatus.CREATED).body(addHotel);
 
