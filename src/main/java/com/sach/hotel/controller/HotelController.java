@@ -39,10 +39,10 @@ public class HotelController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Hotel> getHotel(@PathVariable int id){
-
+         System.out.println("Hotel Data Fetch");
         Hotel hoteldetail=hotelService.getHotelDetails(id);
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(hoteldetail);
+        return ResponseEntity.status(HttpStatus.OK).body(hoteldetail);
     }
 
     @PutMapping("/update")
